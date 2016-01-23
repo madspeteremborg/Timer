@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-8O-VXV" userLabel="Minute Slider">
-                                <rect key="frame" x="68" y="520" width="464" height="31"/>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT3-XO-vTA" userLabel="Minute Display">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZT3-XO-vTA" userLabel="Minute Display">
                                 <rect key="frame" x="70" y="320" width="460" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="xXr-b5-bNp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-8O-VXV" userLabel="Minute Slider">
+                                <rect key="frame" x="68" y="520" width="464" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -40,6 +40,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mH3-8O-VXV" secondAttribute="bottom" constant="50" id="lWO-27-DQR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="ZT3-XO-vTA" id="Elv-pr-QN5"/>
+                        <outlet property="minuteSlider" destination="mH3-8O-VXV" id="JWm-Aa-qdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
