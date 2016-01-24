@@ -28,6 +28,9 @@
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-8O-VXV" userLabel="Minute Slider">
                                 <rect key="frame" x="68" y="520" width="464" height="31"/>
+                                <connections>
+                                    <action selector="minuteSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E3e-z5-hf7"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

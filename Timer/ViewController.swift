@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func minuteSliderChanged(sender: UISlider) {
+        let minutes = String(minuteSlider.value)
+        self.displayLabel.text = "00:" + minutes + "10:00"
+    }
 
 }
 
