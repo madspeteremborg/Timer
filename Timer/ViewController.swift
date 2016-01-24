@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func minuteSliderChanged(sender: UISlider) {
-        let minutes = String(minuteSlider.value)
-        self.displayLabel.text = "00:" + minutes + "10:00"
+        let minutes = String(Int(minuteSlider.value))
+        self.displayLabel.text = "00:" + minutes + ":00"
     }
 
 }
