@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UITextField!
     @IBOutlet weak var minuteSlider: UISlider!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    var timer = NSTimer()
+    var seconds = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +30,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func minuteSliderChanged(sender: UISlider) {
-        let minutes = String(Int(minuteSlider.value))
-        self.displayLabel.text = "00:" + minutes + ":00"
+        
+        let minutes = Int(minuteSlider.value)
+        seconds = minutes * 60
+        let minutesText = String(Int(minuteSlider.value))
+        self.displayLabel.text = "00:" + minutesText + ":00"
     }
 
+    @IBAction func startButtonClicked(sender: UIButton) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
+    }
+    @IBAction func stopButtonClicked(sender: UIButton) {
+        timer.invalidate()
+    }
+    
+    func countDown() {
+        seconds--
+        if(seconds <= 0) {
+            timer.invalidate()
+        }
+        self.displayLabel.text = "00:00:" + String(seconds)
+    }
 }
 

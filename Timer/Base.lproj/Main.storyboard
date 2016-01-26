@@ -32,20 +32,41 @@
                                     <action selector="minuteSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E3e-z5-hf7"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVe-hQ-a44">
+                                <rect key="frame" x="120" y="140" width="34" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6b4-Gl-jIu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-ac-zAM">
+                                <rect key="frame" x="448" y="140" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XsV-S1-dWg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jVe-hQ-a44" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="4TQ-2J-PWW"/>
                             <constraint firstItem="mH3-8O-VXV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="GAz-jY-LfQ"/>
                             <constraint firstItem="mH3-8O-VXV" firstAttribute="top" secondItem="ZT3-XO-vTA" secondAttribute="bottom" constant="50" id="Q7p-L2-dnM"/>
+                            <constraint firstItem="jVe-hQ-a44" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="Vcb-0D-peS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LTI-ac-zAM" secondAttribute="trailing" constant="100" id="YQh-84-1NO"/>
                             <constraint firstItem="ZT3-XO-vTA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="gvB-zJ-0g7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mH3-8O-VXV" secondAttribute="trailing" constant="50" id="hzY-bq-Jpb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZT3-XO-vTA" secondAttribute="trailing" constant="50" id="kkI-mE-qWy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mH3-8O-VXV" secondAttribute="bottom" constant="50" id="lWO-27-DQR"/>
+                            <constraint firstItem="LTI-ac-zAM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="t2H-sD-cQw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="ZT3-XO-vTA" id="Elv-pr-QN5"/>
                         <outlet property="minuteSlider" destination="mH3-8O-VXV" id="JWm-Aa-qdD"/>
+                        <outlet property="startButton" destination="jVe-hQ-a44" id="r4Q-x4-4eK"/>
+                        <outlet property="stopButton" destination="LTI-ac-zAM" id="7wz-zf-Tmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
